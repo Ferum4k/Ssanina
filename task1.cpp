@@ -3,17 +3,18 @@
 #include <math.h>
 /*Решалка квадратных уравнений */
 
-main()
+int main()
 {
+    double eps = pow(10,-5);
     double x = 0.0, x1 = 0.0, x2 = 0.0;
-    int a, b, c;
+    int a = 0, b = 0, c = 0;
     scanf("%d",&a);
     scanf("%d",&b);
     scanf("%d",&c);
     double D = pow(b,2) - 4 * a * c;
     if (D < 0)
         printf("Нет корней");
-    if (D == 0)
+    if (abs((D - 0)) < eps)
     {
         x = (-b) / (2*a) ;
         printf("%f",x);
